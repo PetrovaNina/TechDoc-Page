@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5em;
+    color: #4d4e53;
+    background-color: #ffffff;
+}
+
+.main-header, footer {
+    position: fixed;
+    width: 100%;
+    padding: 0.7em 1.5em;
+    color: #ffffff;
+    background-color: rgb(207, 95, 43);
+}
+
+.main-header {
+    top: 0;
+    z-index: 2;
+}
+
+.main-header .title {
+    margin: 0;
+    font-size: 2em;
+    line-height: 1.1em;
+}
+
+footer {
+    bottom: 0;
+}
+
+footer .dev-link {
+    font-size: 0.9em;
+    color: #ffffff;
+}
