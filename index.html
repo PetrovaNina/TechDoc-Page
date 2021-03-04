@@ -10,11 +10,11 @@
 
 <body>
     <header class="main-header">
-        <h1>Technical Documentation Page</h1>
+        <p class="title">Technical Documentation</p>
     </header>
     <nav id="navbar">
-        <header>События в JavaScript
-            <p>События — действия пользователя на странице (клик по кнопке, нажатие клавиши).</p>
+        <header>
+            <h1>События в JavaScript</h1>
         </header>
         <ul>
             <li><a href="#Добавление_обработчиков_событий" class="nav-link">Добавление обработчиков событий</a></li>
@@ -24,12 +24,16 @@
             <li><a href="#Области_видимости" class="nav-link">Области видимости</a></li>
             <li><a href="#Замыкания" class="nav-link">Замыкания</a></li>
             <li><a href="#Замыкания_и_асинхронность" class="nav-link">Замыкания и асинхронность</a></li>
+            <li><a href="#Ссылки" class="nav-link">Ссылки</a></li>
         </ul>
     </nav>
     <main id="main-doc">
         <section id="Добавление_обработчиков_событий" class="main-section">
-            <header>Добавление обработчиков событий</header>
+            <header>
+                <h2>Добавление обработчиков событий</h2>
+            </header>
             <article>
+                <p>События — действия пользователя на странице (клик по кнопке, нажатие клавиши).</p>
                 <code>
                     button.addEventListener('click', function () {
                         // Инструкции
@@ -72,7 +76,9 @@
             </article>
         </section>
         <section id="Объект_event" class="main-section">
-            <header>Объект event</header>
+            <header>
+                <h2>Объект event</h2>
+            </header>
             <article>
                 <p>Объект <code>event</code> — параметр функции-обработчика. Он всегда передаётся браузером в эту
                     функцию в момент
@@ -86,7 +92,9 @@
             </article>
         </section>
         <section id="Действия_по_умолчанию" class="main-section">
-            <header>Действия по умолчанию</header>
+            <header>
+                <h2>Действия по умолчанию</h2>
+            </header>
             <article>
                 <p>Некоторые элементы страницы имеют действия по умолчанию или дефолтные действия. Например, клик по
                     кнопке отправления формы вызывает отправку данных этой формы на сервер, а при клике по ссылке
@@ -107,7 +115,9 @@
             </article>
         </section>
         <section id="Клавиатурные_события" class="main-section">
-            <header>Клавиатурные события</header>
+            <header>
+                <h2>Клавиатурные события</h2>
+            </header>
             <article>
                 <p>
                     У события «нажатие на клавишу» есть специальное название — <code>'keydown'</code>. Такое событие
@@ -144,7 +154,9 @@
             </article>
         </section>
         <section id="Области_видимости" class="main-section">
-            <header>Области видимости</header>
+            <header>
+                <h2>Области видимости</h2>
+            </header>
             <article>
                 <p>
                     У каждой функции есть область видимости — все значения, доступные для этой функции.
@@ -194,7 +206,9 @@
             </article>
         </section>
         <section id="Замыкания" class="main-section">
-            <header>Замыкания</header>
+            <header>
+                <h2>Замыкания</h2>
+            </header>
             <article>
                 <p><span>Замыкание</span> — функция, которая помнит о своём окружении. Это функция + все значения вне
                     локальной области видимости, которые она использует.</p>
@@ -214,7 +228,9 @@
             </article>
         </section>
         <section id="Замыкания_и_асинхронность" class="main-section">
-            <header>Замыкания и асинхронность</header>
+            <header>
+                <h2>Замыкания и асинхронность</h2>
+            </header>
             <article>
                 <p>
                     Некоторые функции выполняются асинхронно, поэтому в момент выполнения кода значение переменной может
@@ -235,6 +251,16 @@
                     addThumbnailClickHandler(thumbnails[i], photos[i]);
                     }
                 </code>
+            </article>
+        </section>
+        <section id="Ссылки" class="main-section">
+            <header>
+                <h2>Ссылки</h2>
+            </header>
+            <article>
+                <p>
+                    Материалы взяты из конспектов <a href="https://htmlacademy.ru/">HTML Academy</a>
+                </p>
             </article>
         </section>
     </main>
