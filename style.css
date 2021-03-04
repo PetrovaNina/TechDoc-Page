@@ -16,7 +16,7 @@ html, body {
 .main-header, footer {
     position: fixed;
     width: 100%;
-    padding: 0.7em 1.5em;
+    padding: 0.7em 20px;
     color: #ffffff;
     background-color: rgb(207, 95, 43);
 }
@@ -32,6 +32,38 @@ html, body {
     line-height: 1.1em;
 }
 
+#navbar {
+    position: fixed;
+    top: 3.4em;
+    left: 0px;
+    min-width: 290px;
+    width: 310px;
+    height: 100vh;
+    border-right: 2px solid;
+    background-color: rgb(241, 237, 235);
+    overflow: hidden;
+}
+
+#navbar h1 {
+    margin-left: 20px;
+}
+
+#navbar ul {
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid;
+}
+
+#navbar li {
+    padding: 10px 20px;
+    border-top: 1px solid;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 footer {
     bottom: 0;
 }
@@ -39,4 +71,28 @@ footer {
 footer .dev-link {
     font-size: 0.9em;
     color: #ffffff;
+}
+
+@media (max-width: 850px) {
+    .main-header .title {
+        font-size: 1.8em;
+    }
+    #navbar {
+        top: auto;
+        bottom: 40px;
+        width: 100%;
+        height: 10em;
+        border-right: 0;
+        border-top: 1px solid;
+        overflow-y: scroll;
+    }
+    #navbar ul {
+        border-bottom: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        font-size: 14px;
+    }
 }
