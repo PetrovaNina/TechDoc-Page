@@ -69,6 +69,39 @@ html, body {
     color: inherit;
 }
 
+main {
+    position: absolute;
+    top: 0;
+    left: 310px;
+    padding: 0 1.5em 15.5em;
+    color: rgb(61, 67, 73);
+    overflow: hidden;
+}
+
+.main-section {
+    padding-top: 3.4em;
+}
+
+pre {
+    padding: 0 1.5em;
+    white-space: pre-wrap;
+    font-size: 0.9em;
+    background-color: rgb(245, 242, 240);
+    border-radius: 5px;
+}
+
+code {
+    word-break: break-word;
+    word-wrap: break-word;
+    padding: 0.1em 0.25em;
+    background-color: rgb(245, 242, 240);
+    border-radius: 5px;
+}
+
+span {
+    font-weight: bold;
+}
+
 footer {
     bottom: 0;
 }
@@ -93,6 +126,9 @@ footer .dev-link {
     }
     #navbar ul {
         border-bottom: 0;
+    }
+    #main-doc {
+        left: 0px;
     }
 }
 

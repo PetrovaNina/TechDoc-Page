@@ -17,14 +17,30 @@
             <h1>События в JavaScript</h1>
         </header>
         <ul>
-            <a href="#Добавление_обработчиков_событий" class="nav-link"><li>Добавление обработчиков событий</li></a>
-            <a href="#Объект_event" class="nav-link"><li>Объект event</li></a>
-            <a href="#Действия_по_умолчанию" class="nav-link"><li>Действия по умолчанию</li></a>
-            <a href="#Клавиатурные_события" class="nav-link"><li>Клавиатурные события</li></a>
-            <a href="#Области_видимости" class="nav-link"><li>Области видимости</li></a>
-            <a href="#Замыкания" class="nav-link"><li>Замыкания</li></a>
-            <a href="#Замыкания_и_асинхронность" class="nav-link"><li>Замыкания и асинхронность</li></a>
-            <a href="#Ссылки" class="nav-link"><li>Ссылки</li></a>
+            <a href="#Добавление_обработчиков_событий" class="nav-link">
+                <li>Добавление обработчиков событий</li>
+            </a>
+            <a href="#Объект_event" class="nav-link">
+                <li>Объект event</li>
+            </a>
+            <a href="#Действия_по_умолчанию" class="nav-link">
+                <li>Действия по умолчанию</li>
+            </a>
+            <a href="#Клавиатурные_события" class="nav-link">
+                <li>Клавиатурные события</li>
+            </a>
+            <a href="#Области_видимости" class="nav-link">
+                <li>Области видимости</li>
+            </a>
+            <a href="#Замыкания" class="nav-link">
+                <li>Замыкания</li>
+            </a>
+            <a href="#Замыкания_и_асинхронность" class="nav-link">
+                <li>Замыкания и асинхронность</li>
+            </a>
+            <a href="#Ссылки" class="nav-link">
+                <li>Ссылки</li>
+            </a>
         </ul>
     </nav>
     <main id="main-doc">
@@ -34,11 +50,13 @@
             </header>
             <article>
                 <p>События — действия пользователя на странице (клик по кнопке, нажатие клавиши).</p>
-                <code>
-                    button.addEventListener('click', function () {
-                        // Инструкции
-                    });
-                </code>
+                <pre>
+<code>
+button.addEventListener('click', function () {
+    // Инструкции
+});
+</code>
+</pre>
                 <ul>В примере:
                     <li><code>button</code> — элемент, на котором мы хотим «слушать» событие.</li>
                     <li><code>addEventListener()</code> — функция добавления обработчика события на элемент.</li>
@@ -52,22 +70,24 @@
                 <p>Обратите внимание, мы передаём функцию, а не её вызов. Если мы вызовем функцию, код из этой функции
                     выполнится сразу и больше не сработает. А нам нужно, чтобы код выполнился асинхронно — в момент,
                     когда произойдёт событие.</p>
-                <code>
-                    // Так добавлять обработчик неправильно
+                <pre>
+<code>
+// Так добавлять обработчик неправильно
 
-                    button.addEventListener('click', function () {
-                        console.log('Клик по кнопке');
-                    }<mark>()</mark>);
-                    // Сообщение сразу же выведется в консоль
-                    
-                    
-                    // А такой код верный
-                    
-                    button.addEventListener('click', function () {
-                        console.log('Клик по кнопке');
-                    });
-                    // Сообщение выведется, когда произойдёт событие клика
-                </code>
+button.addEventListener('click', function () {
+    console.log('Клик по кнопке');
+}<mark>()</mark>);
+// Сообщение сразу же выведется в консоль
+
+
+// А такой код верный
+
+button.addEventListener('click', function () {
+    console.log('Клик по кнопке');
+});
+// Сообщение выведется, когда произойдёт событие клика
+</code>
+</pre>
                 <p>
                     В примере выше мы передаём в обработчик функцию, у которой нет своего имени, она не записана в
                     переменную. Мы создали её там же, где передаём. Такие функции, которые создаются в момент передачи и
@@ -103,15 +123,17 @@
                 <p>Объект <code>event</code> содержит метод, который отменяет действие элемента по умолчанию:
                     <code>preventDefault()</code>.
                 </p>
-                <code>
-                    link.addEventListener('click', function(evt) {
-                        // Отменяем действие по умолчанию
-                        evt.preventDefault();
-                        
-                        // Добавляем инструкции для события клика
-                        console.log('Произошёл клик');
-                    });
-                </code>
+                <pre>
+<code>
+link.addEventListener('click', function(evt) {
+    // Отменяем действие по умолчанию
+    evt.preventDefault();
+    
+    // Добавляем инструкции для события клика
+    console.log('Произошёл клик');
+});
+</code>
+</pre>
             </article>
         </section>
         <section id="Клавиатурные_события" class="main-section">
@@ -135,14 +157,16 @@
                     Эти номера универсальны и одинаковы в любой раскладке. Найти код любой клавиши можно
                     <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode">здесь</a>.
                 </p>
-                <code>
-                    document.addEventListener('keydown', function(evt) {
-                        // Проверяем, что код клавиши равен 27
-                        if (evt.keyCode === 27) {
-                          // Код отсюда выполнится только при нажатии ESC
-                        }
-                    });
-                </code>
+                <pre>
+<code>
+document.addEventListener('keydown', function(evt) {
+    // Проверяем, что код клавиши равен 27
+    if (evt.keyCode === 27) {
+    // Код отсюда выполнится только при нажатии ESC
+    }
+});
+</code>
+</pre>
                 <p>
                     Кроме <code>keyCode</code> есть и другие свойства для определения нажатой клавиши. Например, <a
                         href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key">key</a> и <a
@@ -179,22 +203,24 @@
                     внутри функции ни снаружи, будет ошибка.
                 </p>
                 <p>Так как функция может использовать переменные, объявленные снаружи, их можно переопределять.</p>
-                <code>
-                    var food = 'макароны';
+                <pre>
+<code>
+var food = 'макароны';
 
-                    var eatDinner = function () {
-                        console.log('Поел ' + food);
-                    };
+var eatDinner = function () {
+    console.log('Поел ' + food);
+};
 
-                    eatDinner();
-                    // Выведет: Поел макароны
+eatDinner();
+// Выведет: Поел макароны
 
-                    // Переопределяем переменную food
-                    <mark>food = 'сельдерей';</mark>
+// Переопределяем переменную food
+<mark>food = 'сельдерей';</mark>
 
-                    eatDinner();
-                    // Выведет: Поел сельдерей
-                </code>
+eatDinner();
+// Выведет: Поел сельдерей
+</code>
+</pre>
                 <p>
                     Переопределять снаружи переменные, которые использует функция — не лучшая практика. Это может
                     приводить к неожиданным последствиям и ошибкам в коде. Использовать это нужно осторожно.
@@ -214,17 +240,19 @@
                     локальной области видимости, которые она использует.</p>
                 <p>Благодаря замыканиям мы можем зафиксировать какое-то значение в функции, а использовать саму функцию
                     позже.</p>
-                <code>
-                        var collectContainer = function (<mark>food</mark>) {
-                            return function () {
-                              console.log('Поел ' + <mark>food</mark>);
-                            };
-                        };
-                          
-                          var schoolkid = collectContainer(<mark>'макароны'</mark>);
-                          schoolkid();
-                          // Выведет: Поел макароны
-                    </code>
+                <pre>
+<code>
+var collectContainer = function (<mark>food</mark>) {
+    return function () {
+        console.log('Поел ' + <mark>food</mark>);
+    };
+};
+    
+var schoolkid = collectContainer(<mark>'макароны'</mark>);
+schoolkid();
+// Выведет: Поел макароны
+</code>
+</pre>
             </article>
         </section>
         <section id="Замыкания_и_асинхронность" class="main-section">
@@ -237,20 +265,22 @@
                     уже измениться. Чтобы избавиться от этой проблемы, нужно создать отдельную область видимости. Так
                     все переменные будут под контролем и замыкания не позволят потерять необходимые значения.
                 </p>
-                <code>
-                    var thumbnails = document.querySelectorAll('.gallery__photo-preview');
-                    var fullPhoto = document.querySelector('.full-photo');
+                <pre>
+<code>
+var thumbnails = document.querySelectorAll('.gallery__photo-preview');
+var fullPhoto = document.querySelector('.full-photo');
 
-                    var addThumbnailClickHandler = function (thumbnail, photo) {
-                        thumbnail.addEventListener('click', function () {
-                            fullPhoto.src = photo;
-                        });
-                    };
+var addThumbnailClickHandler = function (thumbnail, photo) {
+    thumbnail.addEventListener('click', function () {
+        fullPhoto.src = photo;
+    });
+};
 
-                    for (var i = 0; i < thumbnails.length; i++) {
-                    addThumbnailClickHandler(thumbnails[i], photos[i]);
-                    }
-                </code>
+for (var i = 0; i < thumbnails.length; i++) {
+addThumbnailClickHandler(thumbnails[i], photos[i]);
+}
+</code>
+</pre>
             </article>
         </section>
         <section id="Ссылки" class="main-section">
